@@ -209,6 +209,6 @@ var Input = React.createClass({
 
 关于JQuery和Promise，看不懂，先搁着。
 
-# 参考
+# 来源
 
 [React入门教程 from 阮一峰](<http://www.ruanyifeng.com/blog/2015/03/react.html>)（使用的是2015年的React版本）
