@@ -31,3 +31,8 @@
 + 知识效用 = 知识获取量 * 知识利用率。
 
 学习是一个长久的**吸收**、**积累**、**更新**知识的过程，道阻且长，切勿浮躁。
+
+# 目标
+
++ 熟悉 HTML，CSS，JavaScript，Git，Node.js，React，Webpack，Docker。
++ 了解 ES6，Vue，Angular，Vim，Emacs，Python。

@@ -25,7 +25,7 @@
 
 这是React最基本的方法，用于将模板转换为HTML语言，并插入指定DOM节点：
 
-```javascript
+```jsx
 ReactDOM.render(
 	<h1>hello world</h1>,
 	document.getElementById('example');
@@ -36,7 +36,7 @@ ReactDOM.render(
 
 在上一个例子中，HTML语言直接写在js中，不加任何引号，这种HTML和js混写的形式就是JSX语法。
 
-```javascript
+```jsx
 var arr = [<h1>title1</h1>, <h2>title2</h2>];
 ReactDOM.render(
 	<div>{arr}</div>,
@@ -51,7 +51,7 @@ ReactDOM.render(
 # 4.组件
 
 React的代码可以封装成组件`Component`，然后像插入普通HTML标签一样，在网页中插入这个组件。`React.createClass`方法用于生成一个组件：
-```javascript
+```jsx
 var HelloMessage = React.createClass({
 	render: function() {
 		return <h1>Hello {this.props.name}</h1>;
@@ -67,7 +67,7 @@ var HelloMessage = React.createClass({
 
 `class`的`style`属性要用双层花括号括起来，一层表示js语法，一层表示样式对象：`style={{opacity: this.state.opacity}}`。
 
-```javascript
+```jsx
 ReactDOM.render(
 	<HelloMessage name='keke' />,
 	document.getElementById('example')
@@ -80,7 +80,7 @@ ReactDOM.render(
 
 `this.props.children`表示组件的所有子节点：
 
-```javascript
+```jsx
 var NoteList = React.createClass({
 	render: function() {
 		return (
@@ -111,7 +111,7 @@ ReactDOM.render(
 
 给组件类设置`PropTypes`属性，可以验证组件实例的属性是否符合要求：
 
-```javascript
+```jsx
 propTypes: {
 	title: React.PropTypes.string.isRequired, // 规定title属性是必需的且应是字符串类型
 }
@@ -119,7 +119,7 @@ propTypes: {
 
 而`getDefaultProps`方法可以用来设置组件属性的默认值：
 
-```javascript
+```jsx
 getDefaultProps: function() {
 	return {
 		title: 'hello world'; // 属性默认值为'hello world'
@@ -129,7 +129,7 @@ getDefaultProps: function() {
 
 # 7.获取真实的DOM节点
 
-```javascript
+```jsx
 var MyComponent = React.createClass({
 	handleClick: function() {
 		this.refs.myTextInput.focus(); // 设置焦点到ref属性为myTextInput的真实节点
@@ -153,7 +153,7 @@ var MyComponent = React.createClass({
 
 React将组件看成是一个状态机，一开始有一个初始状态，互动后，状态变化，就会触发重新渲染UI。
 
-```javascript
+```jsx
 var LikeButton = React.createClass({
 	getInitialState: function() {
 		return {liked: false} // 初始化liked为false
@@ -171,7 +171,7 @@ var LikeButton = React.createClass({
 
 # 9.表单
 
-```javascript
+```jsx
 var Input = React.createClass({
 	getInitialState: function() {
 		return {value: 'Hello!'};
